@@ -1,6 +1,7 @@
 package com.example.dsa.stack
 
 class Stack {
+
     var arr : IntArray? = null
     var topOfStack :Int
 
