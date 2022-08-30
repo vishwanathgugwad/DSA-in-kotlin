@@ -45,7 +45,6 @@ class BinaryTreeLL {
             }
             }
     }
-
     fun searchValue(value : String) : String {
         var result = "Failed"
         var queue : Queue<BinaryNode> = LinkedList()
@@ -63,22 +62,6 @@ class BinaryTreeLL {
             }
         }
         return result
-    }
-    fun deepestNode() : BinaryNode {
-        var queue : Queue<BinaryNode> = LinkedList()
-        queue.add(root)
-        var presentNode = BinaryNode()
-        while (!queue.isEmpty()){
-            presentNode = queue.remove()
-            if (presentNode.left!=null){
-                queue.add(presentNode.left)
-            }
-            if (presentNode.right!=null){
-                queue.add(presentNode.right)
-            }
-
-        }
-        return presentNode
     }
 
     fun insertNode(value : String){
@@ -108,6 +91,22 @@ class BinaryTreeLL {
             }
         }
 
+    }
+    fun deepestNode() : BinaryNode {
+        var queue : Queue<BinaryNode> = LinkedList()
+        queue.add(root)
+        var presentNode = BinaryNode()
+        while (!queue.isEmpty()){
+            presentNode = queue.remove()
+            if (presentNode.left!=null){
+                queue.add(presentNode.left)
+            }
+            if (presentNode.right!=null){
+                queue.add(presentNode.right)
+            }
+
+        }
+        return presentNode
     }
     fun deleteDeepestNode(){
         var queue : Queue<BinaryNode> = LinkedList()
@@ -154,9 +153,6 @@ class BinaryTreeLL {
         root = null
         println("Tree deleted successfully ...")
     }
-
-
-
 }
 
 fun main(){
@@ -173,26 +169,26 @@ fun main(){
     binaryTreeLL.insertNode("N8")
     binaryTreeLL.insertNode("N9")
 
-    //binaryTreeLL.perOrderTraverse(binaryTreeLL.root)
+    binaryTreeLL.perOrderTraverse(binaryTreeLL.root)
    // binaryTreeLL.inOrderTraverse(binaryTreeLL.root)
         // binaryTreeLL.postOrderTraverse(binaryTreeLL.root)
 
 
-    binaryTreeLL.levelOrderTraverse()
-    println()
-    println(binaryTreeLL.deepestNode().value)
-    binaryTreeLL.deleteDeepestNode()
-    println(binaryTreeLL.deepestNode().value)
-    binaryTreeLL.deleteDeepestNode()
-    println(binaryTreeLL.deepestNode().value)
-    binaryTreeLL.insertNode("N123")
-    println(binaryTreeLL.deepestNode().value)
-    binaryTreeLL.levelOrderTraverse()
-    binaryTreeLL.deleteAnyNode("N4")
-    println()
-    binaryTreeLL.levelOrderTraverse()
-    println()
-    binaryTreeLL.deleteEntireTree()
-    binaryTreeLL.levelOrderTraverse()
+//    binaryTreeLL.levelOrderTraverse()
+//    println()
+//    println(binaryTreeLL.deepestNode().value)
+//    binaryTreeLL.deleteDeepestNode()
+//    println(binaryTreeLL.deepestNode().value)
+//    binaryTreeLL.deleteDeepestNode()
+//    println(binaryTreeLL.deepestNode().value)
+//    binaryTreeLL.insertNode("N123")
+//    println(binaryTreeLL.deepestNode().value)
+//    binaryTreeLL.levelOrderTraverse()
+//    binaryTreeLL.deleteAnyNode("N4")
+//    println()
+//    binaryTreeLL.levelOrderTraverse()
+//    println()
+//    binaryTreeLL.deleteEntireTree()
+//    binaryTreeLL.levelOrderTraverse()
 
 }
