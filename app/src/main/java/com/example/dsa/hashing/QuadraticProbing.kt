@@ -2,7 +2,7 @@ package com.example.dsa.hashing
 
 import kotlin.collections.ArrayList
 
-class LinearProbing {
+class QuadraticProbing {
 
 
     var hashTable  : Array<String?>
@@ -31,37 +31,38 @@ class LinearProbing {
         cellsUsed = 0
         var data  = ArrayList<String>(hashTable.size)
         for (i in hashTable){
-          if (i!=null){
-              data.add(i)
-          }
+            if (i!=null){
+                data.add(i)
+            }
         }
         data.add(word!!)
         hashTable = Array(hashTable.size * 2){i -> null}
         for (s in data){
-                inseartInHAshTable(s)
+            inseartInHAshTable(s)
         }
     }
 
 
     fun inseartInHAshTable(word: String?){
-         if (getLoadFactor() >= 0.75){
+        if (getLoadFactor() >= 0.75){
             reHAshKeys(word)
         }else{
             var index = modAsciiFun(word!! , hashTable.size)
+            var counter = 0
             for(index in index until  index+hashTable.size){
-                var newIndex = index % hashTable.size
+                var newIndex = (index + (counter * counter)) % hashTable.size
                 if (hashTable[newIndex] == null){
                     hashTable[newIndex] = word
                     println("$word Inserted Successfully at $newIndex")
                     break
                 }else{
                     println("$newIndex is already occupied trying next empty   cell ")
-
                 }
+                counter++
             }
 
-             cellsUsed ++
-         }
+            cellsUsed ++
+        }
     }
 
     fun searchValue(word : String){
@@ -95,13 +96,13 @@ class LinearProbing {
 }
 
 fun main(){
-    val linearProbing = LinearProbing(5)
-    linearProbing.inseartInHAshTable("The")
-    linearProbing.inseartInHAshTable("quick")
-    linearProbing.inseartInHAshTable("brown")
-    linearProbing.inseartInHAshTable("fox")
-    linearProbing.inseartInHAshTable("over")
-     linearProbing.displayValues()
-    linearProbing.searchValue("The")
+    val quadraticProbing = QuadraticProbing(5)
+    quadraticProbing.inseartInHAshTable("The")
+    quadraticProbing.inseartInHAshTable("quick")
+    quadraticProbing.inseartInHAshTable("brown")
+    quadraticProbing.inseartInHAshTable("fox")
+    quadraticProbing.inseartInHAshTable("over")
+    quadraticProbing.inseartInHAshTable("lazy")
+    quadraticProbing.displayValues()
 
 }
