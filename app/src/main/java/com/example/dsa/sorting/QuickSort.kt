@@ -38,16 +38,10 @@ class QuickSort {
             }
         }
     }
-
-//    fun printArray(arr :Array<Int>) {
-//        for (i in arr) {
-//            print("$i ")
-//        }
-//    }
 }
 
 fun main(){
-    val arr = arrayOf(10,3,2,7,5,8,4,1,9,11)
+    val arr = arrayOf(10,3,11,2,7,5,8,4,1,9)
     QuickSort.quickSort(arr,0,arr.size-1)
     printArray(arr)
 
