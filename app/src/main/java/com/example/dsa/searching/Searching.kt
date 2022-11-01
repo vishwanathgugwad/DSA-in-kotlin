@@ -24,6 +24,7 @@ class LinearSearch{
 }
 
 //BS mostly used for sorted array
+//time complexity O(logn)
 class BinarySearch{
     companion object{
         fun searchElement(arr : Any , element : Any) {
