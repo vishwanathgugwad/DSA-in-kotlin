@@ -1,4 +1,4 @@
-package com.example.dsa
+package com.example.dsa.interviewquestions
 
 //This is to demonstrate  method execution in stack memory.
 //stack memory is used by the system to make recursive calls

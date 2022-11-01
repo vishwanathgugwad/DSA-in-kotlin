@@ -1,4 +1,4 @@
-package com.example.dsa
+package com.example.dsa.interviewquestions
 
 import java.nio.charset.Charset
 import kotlin.random.Random
