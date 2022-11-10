@@ -12,5 +12,9 @@ Clone or download the repository and open it on your favorite IDE
 - Hash Tables
 - Linked Lists
 - Stacks
+- Trees
+- Searching 
+- Sorting
+- Hot Interview Questions
 
 .... MORE CODE UNDER PROCESS 
