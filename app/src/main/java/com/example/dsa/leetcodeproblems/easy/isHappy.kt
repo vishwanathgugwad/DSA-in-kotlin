@@ -9,30 +9,4 @@ fun main(){
         numSum += d * d
     }
     println(numSum)
-
-
-    val obj = Sun<Noob>()
-    obj.push(Noob())
-
-}
-class Noob{
-    val iam1 : String ? = null
-}
-
-class Sun<T>{
-    private var first : Node ? = null
-    inner class Node{
-        var item : T? = null
-        val next : Node? = null
-    }
-    fun push(item : T){
-        val node = Node()
-        node.item = item
-    }
-    fun pop() : T{
-        val t = first?.item
-        first = first?.next
-        return t!!
-    }
-
 }

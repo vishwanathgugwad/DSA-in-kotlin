@@ -1,12 +1,12 @@
 package com.example.dsa.interviewquestions.prefixsums
 
+import java.util.*
+import kotlin.math.round
 
 
 fun main(){
 val arr = arrayOf(10, 10, -1, 2, 4, -1, 2, -1)
     println(MinAvgTwoSlice.solution(arr))
-
-
 }
 
 
