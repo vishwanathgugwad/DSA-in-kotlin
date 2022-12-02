@@ -27,7 +27,7 @@ val n = 10
 fun main(){
     val bubble = BubbleSort()
     var arr = arrayOf(10,5,30,15,50,6)
-    arr.sort()
+    //arr.sort()
     bubble.sort(arr)
     bubble.sortedArray(arr)
 

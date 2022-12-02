@@ -20,11 +20,7 @@ class BucketSort {
                 maxValue = i
             }
         }
-        var buckets = Array<ArrayList<Int>>(numberOfBuckets){ _ -> ArrayList() }
-        for (i in buckets.indices){
-            buckets[i] = ArrayList()
-        }
-
+        var buckets = Array<ArrayList<Int>>(numberOfBuckets){ arrayListOf() }
         for(i in  arr){
            var bucketNumber = ceil((((i * numberOfBuckets).toDouble()/maxValue)))
             buckets[(bucketNumber -1).toInt()].add(i)
