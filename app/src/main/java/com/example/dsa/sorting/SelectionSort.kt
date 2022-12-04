@@ -6,7 +6,7 @@ class SelectionSort {
         for(i in 0 until arr.size-1){
             for (j in i+1 until arr.size-1){
                 if (arr[j] < arr[i]){
-                    var min = arr[j]
+                    val min = arr[j]
                     arr[j] = arr[i]
                     arr[i] = min
                 }

@@ -6,7 +6,7 @@ class MergeSort {
                 if (si >= ei){
                     return
                 }
-                var mid  = si+ (ei - si)/2;
+                var mid  = si+ (ei - si)/2
                 divide(arr,si,mid)
                 divide(arr,mid+1,ei)
                 conquer(arr,si,mid,ei)
@@ -43,7 +43,7 @@ class MergeSort {
 
 
 fun main(){
-val arr = arrayOf(7,6,8,3,4,1,2,5,9)
+val arr = arrayOf(5,2,9,1,3,6)
     MergeSort.divide(arr,0,arr.size-1)
     for (i in arr){
         println(i)

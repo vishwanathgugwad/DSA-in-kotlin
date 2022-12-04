@@ -3,15 +3,14 @@ package com.example.dsa.sorting
 class InsertionSort {
 
     fun sort(arr : Array<Int>){
-        var temp : Int
-        for (i in 1 until arr.size){
-            temp = arr[i]
-            var j = i
-            while (j>0 && arr[j-1] > temp){
-                arr[j] = arr[j-1]
-                j--
+        for (i in arr.indices){
+            for (j in i downTo 0){
+                if (j > 0 && arr[j] < arr[j-1]){
+                    val temp = arr[j]
+                    arr[j] = arr[j-1]
+                    arr[j-1] = temp
+                }
             }
-            arr[j] = temp
         }
     }
     fun sortedArray(arr : Array<Int>){
